@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors - Next Universe */
+  --brand-primary: #5DA7CA;        /* Light Blue */
+  --brand-secondary: #122148;      /* Dark Navy */
+  --brand-light: #FAFAFA;          /* Egg White */
+  --brand-dark: #000000;           /* Black */
+  
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+
+@layer base {
+  :root {
+    /* Shadcn UI Variables with Brand Colors Integration */
+    --background: 0 0% 98%;        /* Using brand-light for background */
+    --foreground: 210 100% 14%;    /* Brand secondary for text */
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 14%;
+    --primary: 196 56% 57%;        /* Brand primary #5DA7CA */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 100% 14%;     /* Brand secondary #122148 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 196 56% 57%;         /* Brand primary for accents */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 196 56% 57%;           /* Brand primary for focus rings */
+    --chart-1: 196 56% 57%;        /* Using brand colors for charts */
+    --chart-2: 210 100% 14%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 210 100% 14%;    /* Brand secondary for dark mode bg */
+    --foreground: 0 0% 98%;
+    --card: 210 100% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 100% 14%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 196 56% 57%;        /* Brand primary stays same in dark mode */
+    --primary-foreground: 210 100% 14%;
+    --secondary: 210 100% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 100% 20%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 196 56% 57%;
+    --accent-foreground: 210 100% 14%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 100% 20%;
+    --input: 210 100% 20%;
+    --ring: 196 56% 57%;
+    --chart-1: 196 56% 57%;
+    --chart-2: 210 100% 40%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
