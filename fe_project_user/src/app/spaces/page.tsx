@@ -90,15 +90,15 @@ export default async function SpacesPage({ searchParams }: SpacesPageProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/70 via-brand-secondary/60 to-brand-primary/40" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-brand-light">
-          <Badge className="w-fit bg-white/20 text-white border-white/30 backdrop-blur-sm mb-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <Badge className="w-fit bg-white/90 text-brand-secondary border-white/30 backdrop-blur-sm mb-4 font-semibold">
             <Sparkles className="h-3 w-3 mr-1" />
             Co-Living Spaces · Find Your Perfect Home
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-brand-light">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             Discover Your Next Home
           </h1>
-          <p className="text-xl text-brand-light/90 max-w-3xl mb-8">
+          <p className="text-xl text-white drop-shadow-md max-w-3xl mb-8">
             Explore our curated selection of co-living spaces across Vietnam.
             From vibrant urban studios to peaceful beachfront retreats, find the
             perfect environment to live, work, and thrive.
@@ -107,20 +107,36 @@ export default async function SpacesPage({ searchParams }: SpacesPageProps) {
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-light">12+</div>
-              <div className="text-sm text-brand-light/80">Locations</div>
+              <div className="text-3xl font-bold text-white drop-shadow-lg">
+                12+
+              </div>
+              <div className="text-sm text-white/90 drop-shadow-md">
+                Locations
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-light">500+</div>
-              <div className="text-sm text-brand-light/80">Happy Residents</div>
+              <div className="text-3xl font-bold text-white drop-shadow-lg">
+                500+
+              </div>
+              <div className="text-sm text-white/90 drop-shadow-md">
+                Happy Residents
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-light">4.8★</div>
-              <div className="text-sm text-brand-light/80">Average Rating</div>
+              <div className="text-3xl font-bold text-white drop-shadow-lg">
+                4.8★
+              </div>
+              <div className="text-sm text-white/90 drop-shadow-md">
+                Average Rating
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-brand-light">95%</div>
-              <div className="text-sm text-brand-light/80">Occupancy Rate</div>
+              <div className="text-3xl font-bold text-white drop-shadow-lg">
+                95%
+              </div>
+              <div className="text-sm text-white/90 drop-shadow-md">
+                Occupancy Rate
+              </div>
             </div>
           </div>
         </div>

@@ -107,14 +107,14 @@ export default function PartnersPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/70 via-brand-secondary/60 to-brand-primary/40" />
         </div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-brand-light space-y-4">
-          <Badge className="w-fit bg-brand-light/20 text-brand-light border-brand-light/30 backdrop-blur-sm">
-            Partners · “Partners Who Power Our Ecosystem”
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-4">
+          <Badge className="w-fit bg-white/90 text-brand-secondary border-white/30 backdrop-blur-sm font-semibold">
+            Partners · "Partners Who Power Our Ecosystem"
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-brand-light">
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Partners Who Power Our Ecosystem
           </h1>
-          <p className="text-lg text-brand-light/90 max-w-3xl">
+          <p className="text-lg text-white drop-shadow-md max-w-3xl">
             NextU Living collaborates with trusted partners across mobility,
             technology, lifestyle, learning, and venture-building. Together, we
             create a seamless living experience and a rich environment for
@@ -125,7 +125,7 @@ export default function PartnersPage() {
             <Button
               size="lg"
               variant="outline"
-              className="bg-brand-light text-brand-secondary hover:bg-brand-light/90 hover:text-brand-secondary border-brand-light font-semibold"
+              className="bg-white text-brand-secondary hover:bg-white/90 hover:text-brand-secondary border-white font-semibold"
               asChild
             >
               <Link href="#cta">Become a Partner</Link>
@@ -133,7 +133,7 @@ export default function PartnersPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-brand-light text-brand-light bg-transparent hover:bg-brand-light hover:text-brand-secondary font-semibold"
+              className="border-white text-white bg-transparent hover:bg-white hover:text-brand-secondary font-semibold"
               asChild
             >
               <Link href="/contact">Talk to Us</Link>

@@ -21,12 +21,12 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        // Brand Colors - Next Universe
+        // Brand Colors - Next Universe (CSS Variables for Runtime Customization)
         brand: {
-          primary: "#5DA7CA", // Light Blue - main brand color
-          secondary: "#122148", // Dark Navy - secondary/dark elements
-          light: "#FAFAFA", // Egg White - backgrounds
-          dark: "#000000", // Black - text/dark elements
+          primary: "var(--brand-primary)",
+          secondary: "var(--brand-secondary)",
+          light: "var(--brand-light)",
+          dark: "var(--brand-dark)",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

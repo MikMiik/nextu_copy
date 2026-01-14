@@ -189,14 +189,14 @@ export default function MembershipPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/70 via-brand-secondary/60 to-brand-primary/40" />
         </div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white space-y-4">
-          <Badge className="w-fit bg-white/20 text-white border-white/30 backdrop-blur-sm">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-4">
+          <Badge className="w-fit bg-white/90 text-brand-secondary border-white/30 backdrop-blur-sm font-semibold">
             Membership & Pricing · NextU Living
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
             Membership & Pricing
           </h1>
-          <p className="text-lg text-white/85 max-w-4xl">
+          <p className="text-lg text-white drop-shadow-md max-w-4xl">
             NextU Living offers flexible membership options designed for digital
             nomads, expats, founders, and young creators. Whether you’re staying
             for a short creative sprint or rooting yourself for the long term,

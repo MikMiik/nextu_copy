@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 :root {
-  /* Brand Colors - Next Universe */
-  --brand-primary: #5DA7CA;        /* Light Blue */
-  --brand-secondary: #122148;      /* Dark Navy */
+  /* Brand Colors - Next Universe (Runtime Customizable) */
+  --brand-primary: #5DA7CA;        /* Light Blue - Default */
+  --brand-secondary: #122148;      /* Dark Navy - Default */
   --brand-light: #FAFAFA;          /* Egg White */
   --brand-dark: #000000;           /* Black */
+  
+  /* For Tailwind opacity modifiers to work */
+  --brand-primary-rgb: 93, 167, 202;
+  --brand-secondary-rgb: 18, 33, 72;
   
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
