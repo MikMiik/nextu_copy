@@ -9,8 +9,9 @@ import Link from "next/link";
 
 export default function VerifyEmailPage() {
   const searchParams = useSearchParams();
-  const router = useRouter();
-  const [status, setStatus] = useState<"pending" | "success" | "error">("pending");
+  const [status, setStatus] = useState<"pending" | "success" | "error">(
+    "pending"
+  );
   const [message, setMessage] = useState<string>("Đang xác minh email...");
 
   useEffect(() => {
@@ -32,8 +33,8 @@ export default function VerifyEmailPage() {
         setStatus("error");
         setMessage(
           err?.response?.data?.message ||
-          err?.message ||
-          "Xác minh email thất bại. Vui lòng thử lại hoặc liên hệ hỗ trợ."
+            err?.message ||
+            "Xác minh email thất bại. Vui lòng thử lại hoặc liên hệ hỗ trợ."
         );
       }
     };
@@ -45,29 +46,38 @@ export default function VerifyEmailPage() {
     <div className="min-h-screen flex items-center justify-center">
       <Card className="max-w-md w-full rounded-2xl border-0 shadow-xl">
         <CardHeader className="text-center">
-          <CardTitle>Xác minh email</CardTitle>
+          <CardTitle className="text-brand-secondary">Xác minh email</CardTitle>
         </CardHeader>
         <CardContent>
           {status === "pending" && (
-            <Alert className="mb-4 rounded-xl">
-              <AlertCircle className="h-5 w-5" />
-              <AlertDescription>{message}</AlertDescription>
+            <Alert className="mb-4 rounded-xl bg-brand-light/90 border-brand-light/30">
+              <AlertCircle className="h-5 w-5 text-brand-secondary/60" />
+              <AlertDescription className="text-brand-secondary/80">
+                {message}
+              </AlertDescription>
             </Alert>
           )}
           {status === "success" && (
-            <Alert variant="default" className="mb-4 rounded-xl">
-              <CheckCircle className="h-5 w-5 text-green-600" />
-              <AlertDescription>{message}</AlertDescription>
+            <Alert
+              variant="default"
+              className="mb-4 rounded-xl border-brand-primary/30 bg-brand-primary/10"
+            >
+              <CheckCircle className="h-5 w-5 text-brand-primary" />
+              <AlertDescription className="text-brand-primary/80">
+                {message}
+              </AlertDescription>
             </Alert>
           )}
           {status === "error" && (
             <Alert variant="destructive" className="mb-4 rounded-xl">
-              <AlertCircle className="h-5 w-5" />
-              <AlertDescription>{message}</AlertDescription>
+              <AlertCircle className="h-5 w-5 text-brand-secondary" />
+              <AlertDescription className="text-brand-secondary">
+                {message}
+              </AlertDescription>
             </Alert>
           )}
           <div className="text-center mt-4">
-            <Link href="/login" className="text-blue-600 hover:underline">
+            <Link href="/login" className="text-brand-primary hover:underline">
               Quay lại trang đăng nhập
             </Link>
           </div>
@@ -75,4 +85,4 @@ export default function VerifyEmailPage() {
       </Card>
     </div>
   );
-} 
+}

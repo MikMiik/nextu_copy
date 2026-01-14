@@ -40,7 +40,7 @@ export default function FilterSelect({
 
   return (
     <Select value={currentValue} onValueChange={handleChange}>
-      <SelectTrigger className="w-[140px] bg-white">
+      <SelectTrigger className="w-[140px] bg-brand-light border-brand-light/30">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>

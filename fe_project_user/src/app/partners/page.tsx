@@ -94,7 +94,7 @@ export const metadata: Metadata = {
 
 export default function PartnersPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#e8f9fc] via-[#f0fbfd] to-[#cce9fa]">
+    <div className="min-h-screen bg-gradient-to-br from-brand-light via-brand-light/90 to-brand-light/80">
       {/* Intro Header */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -105,16 +105,16 @@ export default function PartnersPage() {
             className="object-cover opacity-60"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0c1f47]/70 via-[#1d2951]/60 to-[#28c4dd]/40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/70 via-brand-secondary/60 to-brand-primary/40" />
         </div>
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white space-y-4">
-          <Badge className="w-fit bg-white/20 text-white border-white/30 backdrop-blur-sm">
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-brand-light space-y-4">
+          <Badge className="w-fit bg-brand-light/20 text-brand-light border-brand-light/30 backdrop-blur-sm">
             Partners · “Partners Who Power Our Ecosystem”
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-bold text-brand-light">
             Partners Who Power Our Ecosystem
           </h1>
-          <p className="text-lg text-white/85 max-w-3xl">
+          <p className="text-lg text-brand-light/90 max-w-3xl">
             NextU Living collaborates with trusted partners across mobility,
             technology, lifestyle, learning, and venture-building. Together, we
             create a seamless living experience and a rich environment for
@@ -125,7 +125,7 @@ export default function PartnersPage() {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white text-[#1d2951] hover:bg-white/90 hover:text-[#1d2951] border-white font-semibold"
+              className="bg-brand-light text-brand-secondary hover:bg-brand-light/90 hover:text-brand-secondary border-brand-light font-semibold"
               asChild
             >
               <Link href="#cta">Become a Partner</Link>
@@ -133,7 +133,7 @@ export default function PartnersPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white bg-transparent hover:bg-white hover:text-[#1d2951] font-semibold"
+              className="border-brand-light text-brand-light bg-transparent hover:bg-brand-light hover:text-brand-secondary font-semibold"
               asChild
             >
               <Link href="/contact">Talk to Us</Link>
@@ -146,31 +146,31 @@ export default function PartnersPage() {
         {/* Partner Categories */}
         <section className="space-y-8">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">
+            <h2 className="text-3xl font-bold text-brand-secondary mb-2">
               Partner Categories
             </h2>
-            <p className="text-slate-600">
+            <p className="text-brand-secondary/80">
               Logo grids by category; CMS-friendly for updates.
             </p>
           </div>
 
           {/* Mobility Partners */}
-          <Card className="border-white/70 shadow-sm">
+          <Card className="border-brand-light/30 shadow-sm">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center justify-between gap-3 flex-wrap">
                 <div>
-                  <p className="text-sm font-semibold text-[#28c4dd] uppercase tracking-[0.2em]">
+                  <p className="text-sm font-semibold text-brand-primary uppercase tracking-[0.2em]">
                     Mobility Partners
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-brand-secondary">
                     Logistical convenience & user benefits
                   </h3>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-brand-secondary/80">
                     Seamless transport and urban mobility through trusted
                     partners.
                   </p>
                 </div>
-                <span className="text-xs text-slate-500">
+                <span className="text-xs text-brand-secondary/80">
                   Logos on 4–6 column grid
                 </span>
               </div>
@@ -178,12 +178,12 @@ export default function PartnersPage() {
                 {mobilityPartners.map((p) => (
                   <div
                     key={p.name}
-                    className="bg-white rounded-xl border border-slate-100 p-3 flex flex-col items-center justify-center text-center shadow-sm"
+                    className="bg-brand-light rounded-xl border border-brand-light/30 p-3 flex flex-col items-center justify-center text-center shadow-sm"
                   >
-                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[#e8f9fc] to-[#d2e7ff] flex items-center justify-center text-xs text-slate-600">
-                      <MapPin className="h-4 w-4 text-[#28c4dd]" />
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-brand-light to-brand-light/90 flex items-center justify-center text-xs text-brand-secondary/80">
+                      <MapPin className="h-4 w-4 text-brand-primary" />
                     </div>
-                    <p className="text-sm font-medium text-slate-800 mt-2">
+                    <p className="text-sm font-medium text-brand-secondary mt-2">
                       {p.name}
                     </p>
                   </div>
@@ -193,31 +193,36 @@ export default function PartnersPage() {
           </Card>
 
           {/* Venture Builder */}
-          <Card className="border-white/70 shadow-sm">
+          <Card className="border-brand-light/30 shadow-sm">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center justify-between gap-3 flex-wrap">
                 <div>
-                  <p className="text-sm font-semibold text-[#28c4dd] uppercase tracking-[0.2em]">
+                  <p className="text-sm font-semibold text-brand-primary uppercase tracking-[0.2em]">
                     Venture Builder & Business Ecosystem
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-brand-secondary">
                     Strengthen startup & founder credibility
                   </h3>
                 </div>
-                <span className="text-xs text-slate-500">
+                <span className="text-xs text-brand-secondary/80">
                   Logo grid + summaries
                 </span>
               </div>
               <div className="grid md:grid-cols-3 gap-4">
                 {venturePartners.map((p) => (
-                  <Card key={p.name} className="border-slate-100 bg-white/90">
+                  <Card
+                    key={p.name}
+                    className="border-brand-light/30 bg-brand-light/90"
+                  >
                     <CardContent className="p-4 space-y-2">
                       <div className="flex items-center gap-2">
-                        <Rocket className="h-4 w-4 text-[#1d2951]" />
-                        <p className="font-semibold text-slate-900">{p.name}</p>
+                        <Rocket className="h-4 w-4 text-brand-secondary" />
+                        <p className="font-semibold text-brand-secondary">
+                          {p.name}
+                        </p>
                       </div>
                       {p.description && (
-                        <p className="text-sm text-slate-600">
+                        <p className="text-sm text-brand-secondary/80">
                           {p.description}
                         </p>
                       )}
@@ -229,28 +234,30 @@ export default function PartnersPage() {
           </Card>
 
           {/* People Development */}
-          <Card className="border-white/70 shadow-sm">
+          <Card className="border-brand-light/30 shadow-sm">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center justify-between gap-3 flex-wrap">
                 <div>
-                  <p className="text-sm font-semibold text-[#28c4dd] uppercase tracking-[0.2em]">
+                  <p className="text-sm font-semibold text-brand-primary uppercase tracking-[0.2em]">
                     People Development & Learning
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-brand-secondary">
                     Workshops, coaching, creativity, emotional wellness,
                     leadership
                   </h3>
                 </div>
-                <span className="text-xs text-slate-500">4–6 logos</span>
+                <span className="text-xs text-brand-secondary/80">
+                  4–6 logos
+                </span>
               </div>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {peopleDevPartners.map((p) => (
                   <div
                     key={p.name}
-                    className="bg-white rounded-xl border border-slate-100 p-4 shadow-sm flex items-center gap-2"
+                    className="bg-brand-light rounded-xl border border-brand-light/30 p-4 shadow-sm flex items-center gap-2"
                   >
-                    <Users className="h-4 w-4 text-[#28c4dd]" />
-                    <p className="text-sm font-medium text-slate-800">
+                    <Users className="h-4 w-4 text-brand-primary" />
+                    <p className="text-sm font-medium text-brand-secondary">
                       {p.name}
                     </p>
                   </div>
@@ -260,33 +267,36 @@ export default function PartnersPage() {
           </Card>
 
           {/* Lifestyle & Wellness */}
-          <Card className="border-white/70 shadow-sm">
+          <Card className="border-brand-light/30 shadow-sm">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center justify-between gap-3 flex-wrap">
                 <div>
-                  <p className="text-sm font-semibold text-[#28c4dd] uppercase tracking-[0.2em]">
+                  <p className="text-sm font-semibold text-brand-primary uppercase tracking-[0.2em]">
                     Lifestyle & Wellness Partners
                   </p>
-                  <h3 className="text-xl font-bold text-slate-900">
+                  <h3 className="text-xl font-bold text-brand-secondary">
                     Added perks & community benefits
                   </h3>
                 </div>
-                <span className="text-xs text-slate-500">
+                <span className="text-xs text-brand-secondary/80">
                   CMS-friendly, small icons
                 </span>
               </div>
               <div className="grid md:grid-cols-3 gap-3">
                 {lifestylePartners.map((p) => (
-                  <Card key={p.name} className="border-slate-100 bg-white/90">
+                  <Card
+                    key={p.name}
+                    className="border-brand-light/30 bg-brand-light/90"
+                  >
                     <CardContent className="p-4 space-y-1">
                       <div className="flex items-center gap-2">
-                        <HeartPulse className="h-4 w-4 text-rose-500" />
-                        <p className="text-sm font-semibold text-slate-900">
+                        <HeartPulse className="h-4 w-4 text-brand-primary" />
+                        <p className="text-sm font-semibold text-brand-secondary">
                           {p.name}
                         </p>
                       </div>
                       {p.description && (
-                        <p className="text-xs text-slate-600">
+                        <p className="text-xs text-brand-secondary/80">
                           {p.description}
                         </p>
                       )}
@@ -300,18 +310,18 @@ export default function PartnersPage() {
 
         {/* Strategic Partner Highlight */}
         <section className="space-y-4">
-          <h2 className="text-3xl font-bold text-slate-900">
+          <h2 className="text-3xl font-bold text-brand-secondary">
             Strategic Partner Highlight
           </h2>
-          <Card className="border border-slate-200 bg-white/90 shadow-md">
+          <Card className="border border-brand-light/30 bg-brand-light/90 shadow-md">
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-[#1d2951]" />
-                <p className="text-lg font-semibold text-slate-900">
+                <Shield className="h-5 w-5 text-brand-secondary" />
+                <p className="text-lg font-semibold text-brand-secondary">
                   Showcase 1–3 major partners for strong credibility
                 </p>
               </div>
-              <div className="space-y-3 text-sm text-slate-700">
+              <div className="space-y-3 text-sm text-brand-secondary/80">
                 <p>
                   Example:{" "}
                   <strong>
@@ -328,7 +338,7 @@ export default function PartnersPage() {
               </div>
               <Badge
                 variant="secondary"
-                className="w-fit bg-[#28c4dd]/10 text-[#1d2951]"
+                className="w-fit bg-brand-primary/10 text-brand-secondary"
               >
                 Larger logo size · Badge “Strategic Partner”
               </Badge>
@@ -339,20 +349,26 @@ export default function PartnersPage() {
         {/* Benefits for Residents */}
         <section className="space-y-4">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-[#28c4dd]" />
-            <h2 className="text-3xl font-bold text-slate-900">
+            <Sparkles className="h-5 w-5 text-brand-primary" />
+            <h2 className="text-3xl font-bold text-brand-secondary">
               Benefits for Residents (Value-added Perks)
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             {residentBenefits.map((b) => (
-              <Card key={b.title} className="border-slate-100 bg-white/90">
+              <Card
+                key={b.title}
+                className="border-brand-light/30 bg-brand-light/90"
+              >
                 <CardContent className="p-5 space-y-2">
-                  <p className="text-lg font-semibold text-slate-900">
+                  <p className="text-lg font-semibold text-brand-secondary">
                     {b.title}
                   </p>
-                  <p className="text-sm text-slate-600">{b.desc}</p>
-                  <Badge variant="outline" className="w-fit text-slate-700">
+                  <p className="text-sm text-brand-secondary/80">{b.desc}</p>
+                  <Badge
+                    variant="outline"
+                    className="w-fit text-brand-secondary/80"
+                  >
                     See All Perks
                   </Badge>
                 </CardContent>
@@ -364,13 +380,13 @@ export default function PartnersPage() {
         {/* CTA */}
         <section
           id="cta"
-          className="rounded-3xl bg-gradient-to-r from-[#1d2951] to-[#2c3d7a] text-white p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          className="rounded-3xl bg-gradient-to-r from-brand-secondary to-brand-secondary/80 text-brand-light p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
         >
           <div>
             <p className="text-lg font-semibold">
               Collaborate with NextU Living
             </p>
-            <p className="text-sm text-white/85 max-w-2xl">
+            <p className="text-sm text-brand-light/85 max-w-2xl">
               Join as a partner to co-create better living, learning, and
               wellbeing experiences across our ecosystem.
             </p>
@@ -379,7 +395,7 @@ export default function PartnersPage() {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white text-[#1d2951] hover:bg-white/90 hover:text-[#1d2951] border-white font-semibold"
+              className="bg-brand-light text-brand-secondary hover:bg-brand-light/90 hover:text-brand-secondary border-brand-light font-semibold"
               asChild
             >
               <Link href="/register">
@@ -390,7 +406,7 @@ export default function PartnersPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-[#1d2951] bg-white hover:bg-white/90 hover:text-[#1d2951] font-semibold"
+              className="border-brand-light text-brand-secondary bg-brand-light hover:bg-brand-light/90 hover:text-brand-secondary font-semibold"
               asChild
             >
               <Link href="/contact">Download Deck</Link>

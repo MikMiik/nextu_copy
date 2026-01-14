@@ -119,10 +119,10 @@ export default function ResetPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-brand-light to-brand-light/90 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md rounded-2xl border-0 shadow-xl">
         <CardHeader className="text-center pb-6">
-          <CardTitle className="text-2xl font-bold text-gray-900">
+          <CardTitle className="text-2xl font-bold text-brand-secondary">
             Reset Password
           </CardTitle>
         </CardHeader>
@@ -138,10 +138,10 @@ export default function ResetPasswordPage() {
           {success && (
             <Alert
               variant="default"
-              className="mb-6 rounded-xl border-green-200 bg-green-50"
+              className="mb-6 rounded-xl border-brand-primary/30 bg-brand-primary/10"
             >
-              <CheckCircle className="h-4 w-4 text-green-600" />
-              <AlertDescription className="text-green-800">
+              <CheckCircle className="h-4 w-4 text-brand-primary" />
+              <AlertDescription className="text-brand-primary/80">
                 Password reset successfully! Redirecting to login page...
               </AlertDescription>
             </Alert>
@@ -153,7 +153,7 @@ export default function ResetPasswordPage() {
               <div className="space-y-2">
                 <Label
                   htmlFor="newPassword"
-                  className="text-sm font-medium text-gray-700"
+                  className="text-sm font-medium text-brand-secondary"
                 >
                   New Password
                 </Label>
@@ -170,7 +170,7 @@ export default function ResetPasswordPage() {
                   <button
                     type="button"
                     onClick={() => setShowNewPassword(!showNewPassword)}
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-brand-secondary/60 hover:text-brand-secondary"
                   >
                     {showNewPassword ? (
                       <EyeOff className="h-4 w-4" />
@@ -185,7 +185,7 @@ export default function ResetPasswordPage() {
               <div className="space-y-2">
                 <Label
                   htmlFor="confirmPassword"
-                  className="text-sm font-medium text-gray-700"
+                  className="text-sm font-medium text-brand-secondary"
                 >
                   Confirm New Password
                 </Label>
@@ -198,9 +198,9 @@ export default function ResetPasswordPage() {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     className={`rounded-xl h-11 pr-10 ${
                       confirmPassword !== "" && !passwordsMatch
-                        ? "border-red-300 focus:border-red-500 focus:ring-red-500"
+                        ? "border-brand-secondary/30 focus:border-brand-secondary/50 focus:ring-brand-secondary/50"
                         : confirmPassword !== "" && passwordsMatch
-                        ? "border-green-300 focus:border-green-500 focus:ring-green-500"
+                        ? "border-brand-primary/30 focus:border-brand-primary/50 focus:ring-brand-primary/50"
                         : ""
                     }`}
                     required
@@ -218,13 +218,13 @@ export default function ResetPasswordPage() {
                   </button>
                 </div>
                 {confirmPassword !== "" && !passwordsMatch && (
-                  <p className="text-sm text-red-600 flex items-center">
+                  <p className="text-sm text-brand-secondary flex items-center">
                     <X className="h-4 w-4 mr-1" />
                     Passwords do not match
                   </p>
                 )}
                 {confirmPassword !== "" && passwordsMatch && (
-                  <p className="text-sm text-green-600 flex items-center">
+                  <p className="text-sm text-brand-primary flex items-center">
                     <Check className="h-4 w-4 mr-1" />
                     Passwords match
                   </p>
@@ -233,7 +233,7 @@ export default function ResetPasswordPage() {
 
               {/* Password Requirements */}
               <div className="space-y-3">
-                <Label className="text-sm font-medium text-gray-700">
+                <Label className="text-sm font-medium text-brand-secondary">
                   Password Requirements
                 </Label>
                 <div className="space-y-2">
@@ -244,14 +244,14 @@ export default function ResetPasswordPage() {
                         key={requirement.id}
                         className={`flex items-center text-sm ${
                           newPassword === ""
-                            ? "text-gray-400"
+                            ? "text-brand-secondary/60"
                             : isValid
-                            ? "text-green-600"
-                            : "text-red-600"
+                            ? "text-brand-primary"
+                            : "text-brand-secondary"
                         }`}
                       >
                         {newPassword === "" ? (
-                          <div className="w-4 h-4 mr-2 rounded-full border-2 border-gray-300" />
+                          <div className="w-4 h-4 mr-2 rounded-full border-2 border-brand-light/30" />
                         ) : isValid ? (
                           <Check className="w-4 h-4 mr-2" />
                         ) : (
@@ -267,12 +267,12 @@ export default function ResetPasswordPage() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full h-11 rounded-xl bg-gray-900 hover:bg-gray-800 text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full h-11 rounded-xl bg-brand-secondary text-brand-light hover:bg-brand-secondary/90 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={loading || !isFormValid}
               >
                 {loading ? (
                   <div className="flex items-center">
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-brand-light mr-2"></div>
                     Resetting...
                   </div>
                 ) : (
@@ -284,7 +284,7 @@ export default function ResetPasswordPage() {
         </CardContent>
 
         <CardFooter className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-brand-secondary/80">
             Make sure your new password is strong and secure.
           </p>
         </CardFooter>

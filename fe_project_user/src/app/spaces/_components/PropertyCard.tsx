@@ -23,8 +23,8 @@ export default function PropertyCard({
 
   return (
     <Card
-      className={`group overflow-hidden bg-white/95 border hover:shadow-xl transition-all duration-300 ${
-        featured ? "border-[#28c4dd]/30 shadow-lg" : "border-white/60"
+      className={`group overflow-hidden bg-brand-light/95 border hover:shadow-xl transition-all duration-300 ${
+        featured ? "border-brand-primary/30 shadow-lg" : "border-brand-light/30"
       }`}
     >
       {/* Image */}
@@ -37,22 +37,26 @@ export default function PropertyCard({
         />
         {featured && (
           <div className="absolute top-3 left-3">
-            <Badge className="bg-[#28c4dd] text-white border-0">Featured</Badge>
+            <Badge className="bg-brand-primary text-brand-light border-0">
+              Featured
+            </Badge>
           </div>
         )}
         <button
           onClick={() => setIsLiked(!isLiked)}
-          className="absolute top-3 right-3 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+          className="absolute top-3 right-3 w-10 h-10 bg-brand-light/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-transform"
         >
           <Heart
             className={`h-5 w-5 ${
-              isLiked ? "fill-red-500 text-red-500" : "text-slate-600"
+              isLiked
+                ? "fill-brand-primary text-brand-primary"
+                : "text-brand-secondary/80"
             }`}
           />
         </button>
         {property.availableRooms <= 2 && (
           <div className="absolute bottom-3 left-3">
-            <Badge className="bg-orange-500 text-white border-0">
+            <Badge className="bg-brand-primary text-brand-light border-0">
               Only {property.availableRooms} rooms left
             </Badge>
           </div>
@@ -64,26 +68,28 @@ export default function PropertyCard({
         <div className="mb-4">
           <div className="flex items-start justify-between mb-2">
             <Link href={`/spaces/${property.slug}`}>
-              <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#28c4dd] transition-colors">
+              <h3 className="text-xl font-bold text-brand-secondary group-hover:text-brand-primary transition-colors">
                 {property.name}
               </h3>
             </Link>
             <div className="flex items-center gap-1 text-sm font-semibold">
-              <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-slate-900">{property.rating}</span>
-              <span className="text-slate-500">({property.reviews})</span>
+              <Star className="h-4 w-4 text-brand-primary" />
+              <span className="text-brand-secondary">{property.rating}</span>
+              <span className="text-brand-secondary/60">
+                ({property.reviews})
+              </span>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-sm text-slate-600">
-            <MapPin className="h-4 w-4" />
+          <div className="flex items-center gap-2 text-sm text-brand-secondary/80">
+            <MapPin className="h-4 w-4 text-brand-secondary/80" />
             <span>{property.location}</span>
-            <span className="text-slate-400">•</span>
+            <span className="text-brand-secondary/40">•</span>
             <span>{property.distanceFromCenter} from center</span>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-sm text-slate-600 mb-4 line-clamp-2">
+        <p className="text-sm text-brand-secondary/80 mb-4 line-clamp-2">
           {property.description}
         </p>
 
@@ -93,7 +99,7 @@ export default function PropertyCard({
             <Badge
               key={index}
               variant="outline"
-              className="text-xs bg-slate-50 text-slate-700 border-slate-200"
+              className="text-xs bg-brand-light/90 text-brand-secondary border-brand-light/30"
             >
               {highlight}
             </Badge>
@@ -101,7 +107,7 @@ export default function PropertyCard({
         </div>
 
         {/* Amenities */}
-        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-slate-100">
+        <div className="flex items-center gap-3 mb-4 pb-4 border-b border-brand-light/30">
           {property.amenities.slice(0, 4).map((amenity, index) => {
             const Icon = amenityIcons[amenity] || Home;
             return (
@@ -110,15 +116,15 @@ export default function PropertyCard({
                 className="flex flex-col items-center gap-1"
                 title={amenity}
               >
-                <Icon className="h-4 w-4 text-slate-600" />
-                <span className="text-xs text-slate-500">
+                <Icon className="h-4 w-4 text-brand-secondary/80" />
+                <span className="text-xs text-brand-secondary/60">
                   {amenity.length > 6 ? amenity.slice(0, 6) + "..." : amenity}
                 </span>
               </div>
             );
           })}
           {property.amenities.length > 4 && (
-            <span className="text-xs text-slate-500">
+            <span className="text-xs text-brand-secondary/60">
               +{property.amenities.length - 4}
             </span>
           )}
@@ -128,18 +134,18 @@ export default function PropertyCard({
         <div className="flex items-center justify-between">
           <div>
             <div className="flex items-baseline gap-1">
-              <span className="text-2xl font-bold text-slate-900">
+              <span className="text-2xl font-bold text-brand-secondary">
                 {(property.price / 1000000).toFixed(1)}M
               </span>
-              <span className="text-sm text-slate-600">VND/month</span>
+              <span className="text-sm text-brand-secondary/80">VND/month</span>
             </div>
-            <div className="flex items-center gap-1 text-xs text-slate-500">
-              <Users className="h-3 w-3" />
+            <div className="flex items-center gap-1 text-xs text-brand-secondary/60">
+              <Users className="h-3 w-3 text-brand-secondary/60" />
               <span>Up to {property.capacity} residents</span>
             </div>
           </div>
           <Button
-            className="bg-[#28c4dd] hover:bg-[#1fb0cc] text-white font-semibold"
+            className="bg-brand-primary hover:bg-brand-primary/90 text-brand-light font-semibold"
             asChild
           >
             <Link href={`/spaces/${property.slug}`}>

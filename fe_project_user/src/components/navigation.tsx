@@ -53,7 +53,7 @@ export function Navigation() {
               <>
                 <Button
                   variant="outline"
-                  className="rounded-full border-brand-secondary text-brand-secondary hover:border-brand-primary hover:text-brand-primary"
+                  className="rounded-full border-brand-secondary text-brand-secondary hover:border-brand-primary hover:text-light-primary"
                   asChild
                 >
                   <Link href="/login">{t("signin")}</Link>

@@ -19,7 +19,6 @@ import { AlertCircle, Loader2, Eye, EyeOff } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/auth-context";
-import { saveAccessToken } from "@/utils/auth";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -231,7 +230,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center bg-gradient-to-br from-brand-light to-brand-primary/10">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <Card className="w-full max-w-md rounded-2xl border-0 shadow-xl bg-brand-light">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl font-bold text-brand-secondary">

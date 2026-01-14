@@ -35,12 +35,12 @@ export default function SearchBar() {
 
   return (
     <div className="relative flex-1">
-      <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
+      <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-brand-secondary/60" />
       <Input
         placeholder="Search by name or location..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="pl-10 bg-white border-slate-200"
+        className="pl-10 bg-brand-light border-brand-light/30"
       />
     </div>
   );

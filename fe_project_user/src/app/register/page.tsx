@@ -81,7 +81,7 @@ export default function RegisterPage() {
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
       <Card className="w-full max-w-md rounded-2xl border-0 shadow-xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl font-bold text-slate-800">
+          <CardTitle className="text-2xl font-bold text-brand-secondary">
             Create an Account
           </CardTitle>
           <CardDescription>Join the Next Universe community</CardDescription>
@@ -95,9 +95,9 @@ export default function RegisterPage() {
           )}
 
           {success && (
-            <Alert className="mb-6 rounded-xl bg-green-50 border-green-200">
-              <CheckCircle className="h-4 w-4 text-green-600" />
-              <AlertDescription className="text-green-800">
+            <Alert className="mb-6 rounded-xl bg-brand-primary/10 border-brand-primary/30">
+              <CheckCircle className="h-4 w-4 text-brand-primary" />
+              <AlertDescription className="text-brand-primary/80">
                 Registration successful! Redirecting to login...
               </AlertDescription>
             </Alert>
@@ -139,7 +139,7 @@ export default function RegisterPage() {
                 className="rounded-xl"
                 required
               />
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-brand-secondary/80">
                 Password must be at least 8 characters long
               </p>
             </div>
@@ -157,7 +157,7 @@ export default function RegisterPage() {
             </div>
             <Button
               type="submit"
-              className="w-full rounded-full bg-slate-800 hover:bg-slate-700"
+              className="w-full rounded-full bg-brand-secondary text-brand-light hover:bg-brand-secondary/90"
               disabled={isLoading || success}
             >
               {isLoading ? (
@@ -174,10 +174,10 @@ export default function RegisterPage() {
         <CardFooter className="flex flex-col space-y-4">
           <div className="relative w-full">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-200"></div>
+              <div className="w-full border-t border-brand-light/30"></div>
             </div>
             <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-white px-2 text-slate-500">
+              <span className="px-2 text-brand-secondary/80">
                 Or continue with
               </span>
             </div>
@@ -190,11 +190,11 @@ export default function RegisterPage() {
               Facebook
             </Button>
           </div>
-          <div className="text-center text-sm text-slate-600">
+          <div className="text-center text-sm text-brand-secondary/80">
             Already have an account?{" "}
             <Link
               href="/login"
-              className="font-medium text-blue-600 hover:text-blue-800"
+              className="font-medium text-brand-primary hover:text-brand-primary/80"
             >
               Sign in
             </Link>
