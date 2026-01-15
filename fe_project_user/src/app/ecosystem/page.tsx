@@ -286,7 +286,7 @@ export default function EcosystemPage() {
             <Link href="/ecosystem/Co-living">
               <Button
                 size="lg"
-                className="rounded-full bg-brand-light text-brand-secondary hover:bg-brand-light/90 px-10"
+                className="rounded-full bg-brand-light text-brand-secondary px-10"
               >
                 Explore Co-living Spaces
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -295,8 +295,7 @@ export default function EcosystemPage() {
             <Link href="/ecosystem/events">
               <Button
                 size="lg"
-                variant="outline"
-                className="rounded-full border-2 border-brand-light text-brand-light hover:bg-brand-light hover:text-brand-secondary px-10"
+                className="rounded-full bg-brand-light text-brand-secondary px-10"
               >
                 Browse Events
               </Button>

@@ -674,7 +674,7 @@ export default function PackageSection({
                         className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
                           showType === "basic"
                             ? "bg-brand-primary text-white shadow-md"
-                            : "text-brand-light/70 hover:text-brand-light hover:bg-brand-secondary/70"
+                            : "text-brand-light"
                         }`}
                       >
                         <Building2 className="w-4 h-4" />
@@ -684,8 +684,8 @@ export default function PackageSection({
                         onClick={() => updateShowType("combo")}
                         className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
                           showType === "combo"
-                            ? "bg-brand-secondary text-white shadow-md"
-                            : "text-brand-light/70 hover:text-brand-light hover:bg-brand-secondary/70"
+                            ? "bg-brand-primary text-white shadow-md"
+                            : "text-brand-light"
                         }`}
                       >
                         <Sparkles className="w-4 h-4" />

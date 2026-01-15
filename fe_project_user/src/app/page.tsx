@@ -126,7 +126,7 @@ export default function HomePage() {
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full px-10 py-6 text-lg border-2 border-brand-primary/20 bg-brand-light/80 backdrop-blur-sm hover:bg-brand-light/90"
+              className="rounded-full px-10 py-6 text-lg border-2 border-brand-primary/20 bg-brand-light/80 backdrop-blur-sm"
             >
               {t("hero.cta2")}
             </Button>
